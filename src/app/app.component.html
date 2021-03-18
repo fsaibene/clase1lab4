@@ -2,7 +2,15 @@
 
 {{title}}
 <br>
-<input type="text" [(ngModel)]="title">
+Edad 1:
+<input type="text" [(ngModel)]="age1">
 <br>
-<button (click)="cambiarTitulo()">Poner lalala</button>
+Edad 2:
+<input type="text" [(ngModel)]="age2">
+<br>
+
+<div *ngIf="showResult">El promedio es {{this.average}}</div>   
+<button (click)="calculate()">Calcular promedio</button>
+<br>
+<button (click)="clean()">Limpiar cuadros de texto</button>
 <router-outlet></router-outlet>

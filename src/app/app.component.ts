@@ -6,10 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mi-proyecto';
+  public title = 'mi-proyecto';
+  public age1 = 0;
+  public age2 = 0;
+  public average: number = 0;
+  public showResult: boolean = false;
 
-  public cambiarTitulo(): void {
-    this.title = "lalla";
+  public calculate(): void {
+    this.average = (+this.age1 + +this.age2) / 2;
+    this.showResult = true;
   }
   
+  public clean(): void {
+    this.age1 = 0;
+    this.age2 = 0;
+    this.showResult = false;
+  }
+
 }
